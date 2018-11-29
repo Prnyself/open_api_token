@@ -11,14 +11,15 @@ var (
 
 	RunMode string
 
-	HTTPPort int
-	ReadTimeout time.Duration
+	HTTPPort     int
+	ReadTimeout  time.Duration
 	WriteTimeout time.Duration
 
-	LogSavePath string
-	LogSaveName string
-	LogFileExt  string
-	TimeFormat  string
+	LogSavePath  string
+	LogSaveName  string
+	LogFileExt   string
+	TimeFormat   string
+	DebugLogName string
 )
 
 func init() {
