@@ -1,0 +1,32 @@
+# 启动模式 development: 开发模式, production: 生产模式
+app_mode = debug
+
+# 应用相关配置
+[app]
+port = 3309 # server启动端口
+read_timeout = 60
+write_timeout = 60
+
+
+[cache_redis]
+host = 127.0.0.1 # redis缓存host
+port = 6379 # redis缓存端口
+password = password # redis缓存密码
+db = 2 # redis缓存数据库
+
+[database]
+type = mysql
+host = 192.168.10.66 # 数据库ip
+port = 3306 # 数据库端口
+user = root # 数据库用户名
+password = password
+database = new_platform
+
+[log]
+log_save_path = logs/
+log_save_name = gin
+log_file_ext = log
+time_format = 2006-01-02
+
+[log.debug]
+log_save_name = debug
