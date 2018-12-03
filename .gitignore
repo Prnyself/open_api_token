@@ -12,3 +12,6 @@ gen
 logs/*.log
 
 config/*.ini
+
+vendor/
+!vendor/vendor.json
