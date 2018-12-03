@@ -1,11 +1,11 @@
 package main
 
 import (
-	"./router"
-	"./settings"
 	"fmt"
 	"log"
 	"net/http"
+	"open_api_token/router"
+	"open_api_token/settings"
 )
 
 func main() {

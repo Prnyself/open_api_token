@@ -1,12 +1,12 @@
 package router
 
 import (
-	"../router/access_token"
-	"../settings"
 	"fmt"
 	"github.com/gin-gonic/gin"
 	"io"
 	"net/http"
+	"open_api_token/router/access_token"
+	"open_api_token/settings"
 	"os"
 )
 
