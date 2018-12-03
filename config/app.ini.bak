@@ -11,7 +11,7 @@ write_timeout = 60
 [cache_redis]
 host = 127.0.0.1 # redis缓存host
 port = 6379 # redis缓存端口
-password = password # redis缓存密码
+password = password # redis缓存密码, 如果没有密码就写''
 db = 2 # redis缓存数据库
 
 [database]
