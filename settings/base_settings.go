@@ -25,7 +25,7 @@ var (
 func init() {
 	var err error
 	//log.Println(os.)
-	Cfg, err = ini.Load("config/app.ini")
+	Cfg, err = ini.Load("./config/app.ini")
 	if err != nil {
 		log.Fatalf("Fail to parse 'config/1app.ini': %v", err)
 	}

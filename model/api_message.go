@@ -1,6 +1,7 @@
 package model
 
 type ApiMessage struct {
+	Model
 	Code        int
 	Name        string
 	Description string

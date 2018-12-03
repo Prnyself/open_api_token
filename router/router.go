@@ -5,9 +5,12 @@ import (
 	"github.com/gin-gonic/gin"
 	"io"
 	"net/http"
+	"open_api_token/libs/result_handler"
+	"open_api_token/model"
 	"open_api_token/router/access_token"
 	"open_api_token/settings"
 	"os"
+	"strconv"
 )
 
 func InitRouter() *gin.Engine {
@@ -36,6 +39,15 @@ func InitRouter() *gin.Engine {
 			"code": 200,
 			"msg":  "hello world",
 		})
+	})
+
+	openApi.GET("/request_log", func(context *gin.Context) {
+		limit, _ := strconv.Atoi(context.Query("per_page"))
+		logs := model.GetAllLogs(limit)
+		result := result_handler.OkResult(map[string]interface{}{
+			"result": logs,
+		})
+		context.JSON(http.StatusOK, result)
 	})
 
 	return r

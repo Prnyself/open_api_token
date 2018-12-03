@@ -13,9 +13,13 @@ import (
 var db *gorm.DB
 
 type Model struct {
-	ID         int `gorm:"primary_key" json:"id"`
-	CreateTime int `json:"create_time"`
-	UpdateTime int `json:"update_time"`
+	ID         int       `gorm:"primary_key" json:"id"`
+	CreateTime time.Time `json:"create_time"`
+	UpdateTime time.Time `json:"update_time"`
+}
+
+type HashMaker interface {
+	toHash() map[string]interface{}
 }
 
 func init() {
